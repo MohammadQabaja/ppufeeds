@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:testlogin/screens/courses.dart';
+import 'package:ppu_feeds/screens/courses.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -34,6 +34,7 @@ class LoginPageState extends State<LoginPage> {
         // Store the token to be used later by any request
         final prefs = await SharedPreferences.getInstance();
         prefs.setString('token', token);
+        Navigator.pushReplacementNamed(context, "/home");
       }
     }
   }

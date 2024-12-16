@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:testlogin/screens/loginpage.dart';
-import 'package:testlogin/screens/home.dart';
-import 'package:testlogin/screens/courses.dart';
-import 'package:testlogin/screens/feeds.dart';
-import 'package:testlogin/screens/course_feed_screen.dart';
-import 'package:testlogin/screens/comments.dart'; // Import Comments screen
+import 'package:ppu_feeds/screens/loginpage.dart';
+import 'package:ppu_feeds/screens/home.dart';
+import 'package:ppu_feeds/screens/courses.dart';
+import 'package:ppu_feeds/screens/feeds.dart';
+import 'package:ppu_feeds/screens/course_feed_screen.dart';
+import 'package:ppu_feeds/screens/comments.dart'; 
 
 void main() {
   runApp(const MyApp());
@@ -21,20 +21,20 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      initialRoute: '/login', // Starting at LoginPage
+      initialRoute: '/', // Starting at LoginPage
       routes: {
         '/': (context) => LoginPage(), // Login screen as the root
-        '/home': (context) => HomeScreen(), // Home screen
-        '/courses': (context) => CoursesScreen(), // Courses screen
-        '/feeds': (context) => FeedsScreen(), // Feeds screen
+        '/home': (context) => HomeScreen(), 
+        '/courses': (context) => CoursesScreen(), 
+        '/feeds': (context) => FeedsScreen(), 
         '/courseFeed': (context) => CourseFeedScreen(
-              courseId: 1, // Replace with dynamic value if needed
-              sectionId: 1, // Replace with dynamic value if needed
+              courseId: 1, 
+              sectionId: 1, 
             ),
         '/comments': (context) => Comments(
-              courseId: 1, // Replace with dynamic values if needed
-              sectionId: 1, // Replace with dynamic values if needed
-              postId: 1, // Replace with dynamic values if needed
+              courseId: 1, 
+              sectionId: 1,
+              postId: 1, 
             ),
       },
     );

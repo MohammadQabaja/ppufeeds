@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:testlogin/services/api_service.dart';
+import 'package:ppu_feeds/services/api_service.dart';
 import 'comments.dart';
 
 class CourseFeedScreen extends StatefulWidget {

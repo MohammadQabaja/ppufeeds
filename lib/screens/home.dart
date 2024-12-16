@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:testlogin/screens/course_feed_screen.dart';
-import 'package:testlogin/services/api_service.dart';
+import 'package:ppu_feeds/screens/course_feed_screen.dart';
+import 'package:ppu_feeds/services/api_service.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
