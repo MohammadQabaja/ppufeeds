@@ -3,7 +3,6 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:ppu_feeds/screens/courses.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -44,14 +43,6 @@ class LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Login Page"),
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => CoursesScreen()));
-              },
-              icon: Icon(Icons.list))
-        ],
       ),
       body: Center(
         child: Padding(

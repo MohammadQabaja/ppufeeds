@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ppu_feeds/screens/course_feed_screen.dart';
+import 'package:ppu_feeds/screens/courses.dart';
 import 'package:ppu_feeds/services/api_service.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -19,7 +20,17 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Subscribed Courses')),
+      appBar: AppBar(
+        title: Text('Subscribed Courses'),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CoursesScreen()));
+              },
+              icon: Icon(Icons.list))
+        ],
+      ),
       body: FutureBuilder<List<dynamic>>(
         future: subscriptions,
         builder: (context, snapshot) {
